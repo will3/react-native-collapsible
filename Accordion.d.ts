@@ -102,6 +102,8 @@ export interface AccordionProps<T> {
    */
   touchableProps?: {};
 
+  touchableTestIds?: any;
+
  /**
    * Optional styling for the section container
    */
