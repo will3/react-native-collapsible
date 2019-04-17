@@ -25,6 +25,7 @@ export default class Accordion extends Component {
     underlayColor: PropTypes.string,
     touchableComponent: PropTypes.func,
     touchableProps: PropTypes.object,
+    touchableTestIDs: PropTypes.array,
     disabled: PropTypes.bool,
     expandFromBottom: PropTypes.bool,
   };
@@ -121,6 +122,7 @@ export default class Accordion extends Component {
             <Touchable
               onPress={() => this._toggleSection(key)}
               underlayColor={this.props.underlayColor}
+              testID={this.props.touchableTestIDs == null ? null : this.props.touchableTestIDs(section, key)}
               {...this.props.touchableProps}
             >
               {this.props.renderHeader(

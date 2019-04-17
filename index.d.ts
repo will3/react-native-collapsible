@@ -184,6 +184,8 @@ declare module 'react-native-collapsible/Accordion' {
      * Object of props to pass to the touchable component
      */
     touchableProps?: {};
+
+    touchableTestIDs?: any;
   }
 
   export default class Accordion extends React.Component<AccordionProps, any> {}
